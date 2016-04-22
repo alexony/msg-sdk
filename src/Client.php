@@ -30,7 +30,7 @@ class Client
 					break;
 				
 				default:
-					throw new \Exception($error['error'], 1);
+					throw new \Exception($e->getMessage(), 1);
 					break;
 			}
 		}
