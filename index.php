@@ -12,17 +12,17 @@
 
 		require 'vendor/autoload.php';
 
-		$client = new Momentum\MSGOnline\Client('87a00b085ec42c6f555a3fba82416966');
+		// $client = new Momentum\MSGOnline\Client();
+
+		// $response = $client->getUserApiKey('alec@builtwithmomentum.com', 'password');
+
+		Momentum\MSGOnline\Client::setApiKey('87a00b085ec42c6f555a3fba82416966');
 
 		$products = new Momentum\MSGOnline\Product();
 
-		// echo "<pre>";
-		// print_r($products->all()->current());
-		foreach($products->all() as $product)
-		{	
-			echo "<pre><hr>";
-			print_r($product);
-		}
+		var_dump($products->search(array(
+			'category_id' => '698'
+		)));
 	?>
 
 </body>

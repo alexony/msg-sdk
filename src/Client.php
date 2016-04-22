@@ -26,11 +26,10 @@ class Client
 			
 			switch ($statusCode) {
 				case 401:
-					throw new \Momentum\MSGOnline\Exceptions\InvalidCredentialsException($error['error'], 1);
+					throw new \Momentum\MSGOnline\Exception\InvalidCredentialsException($error['error'], 1);
 					break;
-				
 				default:
-					throw new \Exception($e->getMessage(), 1);
+					throw new \Momentum\MSGOnline\Exception\ClientException($e->getMessage(), 1);
 					break;
 			}
 		}
