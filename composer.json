@@ -1,0 +1,23 @@
+{
+    "name": "momentum/MSGOnline",
+    "description": "The official SDK for using the Marine Stores Guide API",
+    "license": "MIT",
+    "keywords": ["msg","Marine Stores Guide"],
+    "authors": [
+        {
+            "name": "Alec Ritson",
+            "email": "alec@builtwithmomentum.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "~6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.0.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Momentum\\MSGOnline\\": "src"
+        }
+    }
+}
