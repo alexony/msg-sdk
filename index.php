@@ -18,11 +18,8 @@
 
 		Momentum\MSGOnline\Client::setApiKey('87a00b085ec42c6f555a3fba82416966');
 
-		$products = new Momentum\MSGOnline\Product();
-
-		var_dump($products->search(array(
-			'category_id' => '698'
-		)));
+		$category = new Momentum\MSGOnline\Category();
+		var_dump($category->all(true));
 	?>
 
 </body>

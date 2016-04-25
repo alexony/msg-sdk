@@ -8,10 +8,8 @@ class Category extends Client
 		$config = [];
 		if($includeSubCategories)
 		{
-			$config = ['include' => 'subcategories'];
+			$config = ['query' => ['include' => 'subcategories']];
 		}
-
-		dd($config);
 		return new Response($this->request('categories', $config));
 	}
 }

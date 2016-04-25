@@ -23,13 +23,12 @@ class Client
 		} catch (\GuzzleHttp\Exception\ClientException $e) {
 			$error = json_decode($e->getResponse()->getBody(), true);
 			$statusCode = $e->getResponse()->getStatusCode();
-			
 			switch ($statusCode) {
 				case 401:
-					throw new \Momentum\MSGOnline\Exception\InvalidCredentialsException($error['error'], 1);
+					throw new Exception\InvalidCredentialsException($error['error'], 1);
 					break;
 				default:
-					throw new \Momentum\MSGOnline\Exception\ClientException($e->getMessage(), 1);
+					throw new Exception\ClientException($e->getMessage(), 1);
 					break;
 			}
 		}
