@@ -4,11 +4,11 @@ namespace Momentum\MSGOnline;
 class Client
 {
 	public static $apiKey;
-	public $client;
+	public static $client;
 
 	public function __construct()
 	{
-		$this->client = new \GuzzleHttp\Client([
+		self::$client = new \GuzzleHttp\Client([
 			'base_uri' => 'http://vagrant.dev'
 		]);
 	}
@@ -18,8 +18,9 @@ class Client
 		$method = strtolower($method);
 
 		$config['headers'] = ['Authorization' => self::$apiKey];
+
 		try {
-			$response = $this->client->{$method}($path, $config);
+			$response = self::$client->{$method}($path, $config);
 		} catch (\GuzzleHttp\Exception\ClientException $e) {
 			$error = json_decode($e->getResponse()->getBody(), true);
 			$statusCode = $e->getResponse()->getStatusCode();
