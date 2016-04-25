@@ -3,8 +3,14 @@ namespace Momentum\MSGOnline;
 
 class Category extends Client
 {
-	public function all()
+	public function all($includeSubCategories = false)
 	{
-		return new Response($this->request('categories'));
+		$config = [];
+		if($includeSubCategories)
+		{
+			$config = ['include' => 'subcategories'];
+		}
+
+		return new Response($this->request('categories', $config));
 	}
 }
