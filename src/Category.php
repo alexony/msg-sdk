@@ -11,6 +11,7 @@ class Category extends Client
 			$config = ['include' => 'subcategories'];
 		}
 
+		dd($config);
 		return new Response($this->request('categories', $config));
 	}
 }
