@@ -16,10 +16,14 @@
 
 		// $response = $client->getUserApiKey('alec@builtwithmomentum.com', 'password');
 
-		Momentum\MSGOnline\Client::setApiKey('87a00b085ec42c6f555a3fba82416966');
+		Momentum\MSGOnline\Client::setApiKey('baf9006f14909d21e5acf022efca1b15');
 
-		$category = new Momentum\MSGOnline\Category();
-		var_dump($category->all(true));
+		$user = new Momentum\MSGOnline\User();
+		
+		$response = $user->getCurrentUser();
+
+		var_dump($response);
+
 	?>
 
 </body>

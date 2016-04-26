@@ -7,4 +7,9 @@ class User extends Client
 	{
 		return new Response($this->request('user'));
 	}
+
+	public function regenerateToken()
+	{
+		return new Response($this->request('authentication/regenerate_access_token'));
+	}
 }
