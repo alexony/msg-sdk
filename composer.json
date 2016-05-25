@@ -3,6 +3,7 @@
     "description": "The official SDK for using the Marine Stores Guide API",
     "license": "MIT",
     "keywords": ["msg","Marine Stores Guide"],
+    "minimum-stability": "dev",
     "authors": [
         {
             "name": "Alec Ritson",
