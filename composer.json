@@ -1,5 +1,5 @@
 {
-    "name": "momentum/MSGOnline",
+    "name": "momentum/msg-online",
     "description": "The official SDK for using the Marine Stores Guide API",
     "license": "MIT",
     "keywords": ["msg","Marine Stores Guide"],
