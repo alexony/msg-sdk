@@ -9,7 +9,7 @@ class Client
 	public function __construct()
 	{
 		self::$client = new \GuzzleHttp\Client([
-			'base_uri' => 'http://vagrant.dev'
+			'base_uri' => 'http://api.marinestoresguide.com'
 		]);
 	}
 
